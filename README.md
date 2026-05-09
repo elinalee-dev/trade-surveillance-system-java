@@ -43,7 +43,7 @@ The frontend dashboard displays alerts in real time with severity classification
 - Java
 - Spring Boot
 - PostgreSQL
-- Hibernate / JPA
+- Hibernate/JPA
 
 ### Frontend
 - React
