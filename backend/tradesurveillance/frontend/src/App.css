@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+button {
+  border: none;
+  padding: 8px 14px;
+  margin: 4px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+input {
+  padding: 10px;
+  width: 260px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.alert-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.alert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}

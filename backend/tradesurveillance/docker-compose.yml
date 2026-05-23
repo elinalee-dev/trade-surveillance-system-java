@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: trade-surveillance-db
+    environment:
+      POSTGRES_DB: trade_surveillance
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Elina0619!
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: .
+    container_name: trade-surveillance-app
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/trade_surveillance
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: Elina0619!
+    ports:
+      - "8080:8080"
