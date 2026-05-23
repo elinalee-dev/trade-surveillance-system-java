@@ -1,87 +1,61 @@
-# Trade Surveillance System
+# Trade Surveillance Dashboard
 
-A full-stack fintech and cybersecurity project built with:
-
-- Java
-- Spring Boot
-- PostgreSQL
-- React
-- REST APIs
-
-## Overview
-
-This system simulates a real-world trade surveillance platform used in financial institutions to monitor suspicious trading activity and security threats.
-
-The backend analyzes incoming trade activity and automatically generates alerts based on abnormal behavior patterns.
-
-The frontend dashboard displays alerts in real time with severity classifications.
-
----
+A full-stack financial trade monitoring dashboard that simulates real-time surveillance workflows used in trading and fintech environments.
 
 ## Features
 
-### Trade Monitoring
-- Store and process trade transactions
-- Analyze incoming trade activity
-- Detect abnormal trading behavior
-
-### Security Detection
-- Suspicious internal IP detection
-- Large trade volume detection
+- Real-time trade monitoring dashboard
+- Automated anomaly detection
+- Suspicious IP detection
+- High-volume trade alerts
 - Potential market manipulation alerts
-
-### Dashboard
-- React frontend dashboard
-- Severity-based color coding
-- Live alert visualization
-
----
+- Interactive charts and analytics
+- REST API integration
+- PostgreSQL database persistence
+- Filtering and search functionality
 
 ## Tech Stack
-
-### Backend
-- Java
-- Spring Boot
-- PostgreSQL
-- Hibernate/JPA
 
 ### Frontend
 - React
 - Vite
+- Recharts
+- CSS
 
----
+### Backend
+- Java
+- Spring Boot
+- Spring Data JPA
+- REST APIs
 
-## Example Alerts
+### Database
+- PostgreSQL
 
-| Alert Type | Severity |
-|---|---|
-| ABNORMAL_TRADE_VOLUME | HIGH |
-| SUSPICIOUS_IP | MEDIUM |
-| POTENTIAL_MARKET_MANIPULATION | CRITICAL |
+## Alert Detection Logic
 
----
+The system automatically generates alerts for:
+- abnormal trade volume
+- suspicious IP addresses
+- high-value trades
+- potential market manipulation behavior
 
 ## API Endpoints
 
-### Create Trade
-POST `/api/trades`
+### Trades
+- `GET /api/trades`
+- `POST /api/trades`
 
-### Get Alerts
-GET `/api/alerts`
+### Alerts
+- `GET /api/alerts`
 
----
+## Example Trade Request
 
-## Future Improvements
-
-- Real-time WebSocket alerts
-- Authentication and login system
-- Charts and analytics
-- Machine learning anomaly detection
-- Docker deployment
-- Cloud hosting
-
----
-
-## Author
-
-Elina Lee
+```json
+{
+  "accountId": "BOT999",
+  "symbol": "MSFT",
+  "side": "BUY",
+  "quantity": 100000,
+  "price": 1000,
+  "ipAddress": "172.16.9.9"
+}
