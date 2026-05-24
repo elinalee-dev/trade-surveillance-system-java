@@ -9,40 +9,48 @@
 
 ---
 
-## Backend Setup
+# Backend Setup
+
+## Navigate to backend folder
 
 cd backend
 
-Run:
+## Run Spring Boot server
 
 ./mvnw spring-boot:run
 
-Server runs on:
+Backend runs on:
+
 http://localhost:8080
 
 ---
 
-## Frontend Setup
+# Frontend Setup
+
+## Navigate to frontend folder
 
 cd frontend
 
-Install dependencies:
+## Install dependencies
 
 npm install
 
-Run frontend:
+## Start React frontend
 
-npm start
+npm run dev
 
 Frontend runs on:
-http://localhost:3000
+
+http://localhost:5173
 
 ---
 
-## Database Setup
+# Database Setup
 
-Create PostgreSQL database:
+## Create PostgreSQL database
 
 CREATE DATABASE tradesurveillance;
 
-Update application.properties with your credentials.
+## Configure database credentials
+
+Update application.properties with your PostgreSQL username and password.
