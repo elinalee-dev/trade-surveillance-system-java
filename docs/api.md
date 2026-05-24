@@ -2,7 +2,9 @@
 
 ## Base URL
 http://localhost:8080/api
+
 http://localhost:8080/api/trades
+
 http://localhost:8080/api/alerts
 
 ---
