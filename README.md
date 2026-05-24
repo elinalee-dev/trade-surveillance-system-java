@@ -58,7 +58,7 @@ The surveillance engine automatically generates alerts for the following conditi
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
