@@ -1,44 +1,59 @@
 # Detection Rules
 
-## Volume Spike Detection
+## Abnormal Trade Volume Detection
 
-Flags trades with unusually large volume compared to average activity.
+Flags trades with unusually large trade quantities.
 
-Condition:
-- volume > 10,000
+### Condition
 
-Severity:
-- High
+- quantity > 1000
 
----
+### Severity
 
-## Rapid Order Submission
+- HIGH
 
-Flags accounts submitting many orders in a short time period.
+### Example
 
-Condition:
-- more than 20 orders within 60 seconds
-
-Severity:
-- Medium
+A trade submitting 5000 shares of AAPL will generate a HIGH severity alert.
 
 ---
 
-## Suspicious Login Activity
+## Suspicious IP Detection
 
-Flags logins from unknown IP addresses or multiple geographic regions.
+Flags trades submitted from suspicious internal IP addresses.
 
-Condition:
-- login attempts from different locations within short timeframe
+### Condition
 
-Severity:
-- High
+- IP address starts with "10."
+
+### Severity
+
+- MEDIUM
+
+### Example
+
+A trade submitted from:
+
+10.0.0.55
+
+will generate a suspicious IP alert.
 
 ---
 
-## Price Manipulation Pattern
+## Potential Market Manipulation Monitoring
 
-Detects unusual price fluctuations potentially indicating spoofing or manipulation.
+The system is designed to simulate surveillance workflows used to identify potentially suspicious market behavior patterns.
 
-Condition:
-- repeated buy/sell cancellations with large spread differences
+### Examples
+
+- unusually large trades
+- repeated abnormal activity
+- suspicious account behavior
+
+### Future Improvements
+
+Future versions may include:
+- rapid order detection
+- spoofing detection
+- machine learning anomaly detection
+- account takeover detection
