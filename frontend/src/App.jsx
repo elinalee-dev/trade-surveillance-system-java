@@ -19,9 +19,10 @@ function App() {
   useEffect(() => {
 
     const fetchAlerts = () => {
-      fetch("http://localhost:8080/api/alerts")
-          .then((res) => res.json())
-          .then((data) => setAlerts(data));
+        fetch("http://localhost:8080/api/alerts")
+            .then((res) => res.json())
+            .then((data) => setAlerts(data))
+            .catch((err) => console.error(err));
     };
 
     fetchAlerts();

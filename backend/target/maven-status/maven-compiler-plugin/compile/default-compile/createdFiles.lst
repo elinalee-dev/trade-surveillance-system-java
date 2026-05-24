@@ -1,0 +1,9 @@
+com/elina/tradesurveillance/controller/TradeController.class
+com/elina/tradesurveillance/repository/TradeRepository.class
+com/elina/tradesurveillance/model/Alert.class
+com/elina/tradesurveillance/repository/AlertRepository.class
+com/elina/tradesurveillance/TradesurveillanceApplication.class
+com/elina/tradesurveillance/controller/HelloController.class
+com/elina/tradesurveillance/controller/AlertController.class
+com/elina/tradesurveillance/model/Trade.class
+com/elina/tradesurveillance/service/TradeSurveillanceService.class
