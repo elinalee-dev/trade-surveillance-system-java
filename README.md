@@ -1,10 +1,10 @@
-# 📊 Trade Surveillance Dashboard
+# Trade Surveillance Dashboard
 
 A full-stack financial trade monitoring platform that simulates real-time surveillance workflows used in professional trading and fintech environments. Built with React, Spring Boot, and PostgreSQL.
 
 ---
 
-## ✨ Features
+## Features
 
 - **Real-time trade monitoring** — live feed of incoming trades with instant visibility
 - **Automated anomaly detection** — rules-based engine flags suspicious activity as it happens
@@ -18,7 +18,7 @@ A full-stack financial trade monitoring platform that simulates real-time survei
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -28,7 +28,7 @@ A full-stack financial trade monitoring platform that simulates real-time survei
 
 ---
 
-## 🚨 Alert Detection Logic
+## Alert Detection Logic
 
 The surveillance engine automatically generates alerts for the following conditions:
 
@@ -41,7 +41,7 @@ The surveillance engine automatically generates alerts for the following conditi
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Trades
 
@@ -106,7 +106,7 @@ The dashboard will be available at `http://localhost:5173`.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 trade-surveillance-system-java/
@@ -131,6 +131,6 @@ trade-surveillance-system-java/
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License. See `LICENSE` for details.
