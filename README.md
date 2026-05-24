@@ -48,14 +48,10 @@ The system automatically generates alerts for:
 ### Alerts
 - `GET /api/alerts`
 
-## Example Trade Request
+## Running the Project
 
-```json
-{
-  "accountId": "BOT999",
-  "symbol": "MSFT",
-  "side": "BUY",
-  "quantity": 100000,
-  "price": 1000,
-  "ipAddress": "172.16.9.9"
-}
+### Backend
+
+```bash
+cd backend
+./mvnw spring-boot:run
