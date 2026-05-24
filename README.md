@@ -1,57 +1,136 @@
-# Trade Surveillance Dashboard
+# 📊 Trade Surveillance Dashboard
 
-A full-stack financial trade monitoring dashboard that simulates real-time surveillance workflows used in trading and fintech environments.
+A full-stack financial trade monitoring platform that simulates real-time surveillance workflows used in professional trading and fintech environments. Built with React, Spring Boot, and PostgreSQL.
 
-## Features
+---
 
-- Real-time trade monitoring dashboard
-- Automated anomaly detection
-- Suspicious IP detection
-- High-volume trade alerts
-- Potential market manipulation alerts
-- Interactive charts and analytics
-- REST API integration
-- PostgreSQL database persistence
-- Filtering and search functionality
+## ✨ Features
 
-## Tech Stack
+- **Real-time trade monitoring** — live feed of incoming trades with instant visibility
+- **Automated anomaly detection** — rules-based engine flags suspicious activity as it happens
+- **Suspicious IP detection** — identifies and surfaces trades originating from flagged addresses
+- **High-volume trade alerts** — automatic alerts for trades exceeding defined volume thresholds
+- **Market manipulation detection** — pattern-based detection of potential manipulative behavior
+- **Interactive charts & analytics** — visual dashboards powered by Recharts
+- **REST API integration** — clean API layer connecting frontend and backend
+- **PostgreSQL persistence** — durable storage for trades, alerts, and audit history
+- **Filtering & search** — quickly locate trades or alerts by symbol, status, IP, or time range
 
-### Frontend
-- React
-- Vite
-- Recharts
-- CSS
+---
 
-### Backend
-- Java
-- Spring Boot
-- Spring Data JPA
-- REST APIs
+## 🛠 Tech Stack
 
-### Database
-- PostgreSQL
+| Layer | Technology |
+|---|---|
+| **Frontend** | React, Vite, Recharts, CSS |
+| **Backend** | Java, Spring Boot, Spring Data JPA |
+| **Database** | PostgreSQL |
 
-## Alert Detection Logic
+---
 
-The system automatically generates alerts for:
-- abnormal trade volume
-- suspicious IP addresses
-- high-value trades
-- potential market manipulation behavior
+## 🚨 Alert Detection Logic
 
-## API Endpoints
+The surveillance engine automatically generates alerts for the following conditions:
+
+| Alert Type | Trigger |
+|---|---|
+| Abnormal Trade Volume | Trade quantity exceeds configured threshold |
+| Suspicious IP Address | Source IP matches flagged address list |
+| High-Value Trade | Trade value surpasses monetary limit |
+| Market Manipulation | Patterns indicative of layering or spoofing detected |
+
+---
+
+## 📡 API Endpoints
 
 ### Trades
-- `GET /api/trades`
-- `POST /api/trades`
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/api/trades` | Retrieve all trades |
+| `POST` | `/api/trades` | Submit a new trade |
 
 ### Alerts
-- `GET /api/alerts`
 
-## Running the Project
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/api/alerts` | Retrieve all generated alerts |
 
-### Backend
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed before running the project:
+
+- Java 17+
+- Node.js 18+
+- PostgreSQL 14+
+- Maven (or use the included `./mvnw` wrapper)
+
+### Database Setup
+
+1. Create a PostgreSQL database:
+
+```sql
+CREATE DATABASE trade_surveillance;
+```
+
+2. Update your database credentials in `backend/src/main/resources/application.properties`:
+
+```properties
+spring.datasource.url=jdbc:postgresql://localhost:5432/trade_surveillance
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+```
+
+### Running the Backend
 
 ```bash
 cd backend
 ./mvnw spring-boot:run
+```
+
+The API will be available at `http://localhost:8080`.
+
+### Running the Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The dashboard will be available at `http://localhost:5173`.
+
+---
+
+## 📁 Project Structure
+
+```
+trade-surveillance-system-java/
+├── backend/
+│   ├── src/main/java/com/elina/tradesurveillance/
+│   │   ├── controller/        # REST controllers
+│   │   ├── model/             # Trade & Alert entities
+│   │   ├── repository/        # JPA repositories
+│   │   ├── service/           # Surveillance logic
+│   │   └── TradesurveillanceApplication.java
+│   ├── resources/application.properties
+│   └── pom.xml
+├── frontend/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+├── postman/                   # API collections & environments
+├── images/                    # Dashboard screenshots
+└── README.md
+```
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See `LICENSE` for details.
