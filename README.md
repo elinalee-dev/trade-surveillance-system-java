@@ -7,9 +7,6 @@ A full-stack financial trade monitoring platform that simulates real-time survei
 ## Dashboard 
 
 ![Dashboard](images/dashboard.png)
-![Critical Alerts](images/dashboard-critical.png)
-![High Alerts](images/dashboard-high.png)
-![Medium Alerts](images/dashboard-medium.png)
 
 ## Features
 
