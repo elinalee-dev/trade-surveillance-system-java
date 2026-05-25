@@ -1,8 +1,11 @@
 # Trade Surveillance Dashboard
 
-A full-stack financial trade monitoring platform that simulates real-time surveillance workflows used in professional trading and fintech environments. Built with React, Spring Boot, and PostgreSQL.
+A full-stack financial trade monitoring platform that simulates real-time surveillance workflows used in professional trading and fintech environments. The system ingests live trade data, applies a rules-based anomaly detection engine, and surfaces alerts through an interactive analytics dashboard — mirroring the kind of tooling used by compliance and risk teams at trading firms. Built with React, Spring Boot, and PostgreSQL.
 
 ---
+
+## Dashboard 
+
 
 ## Features
 
@@ -59,6 +62,7 @@ The surveillance engine automatically generates alerts for the following conditi
 ---
 
 ## Getting Started
+Start the backend first, then the frontend. The frontend expects the API to be running at http://localhost:8080 before connecting.
 
 ### Prerequisites
 
