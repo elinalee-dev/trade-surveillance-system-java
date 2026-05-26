@@ -6,7 +6,7 @@ Flags trades with unusually large trade quantities.
 
 ### Condition
 
-- quantity > 1000
+- quantity >= 1000
 
 ### Severity
 
