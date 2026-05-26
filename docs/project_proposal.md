@@ -94,12 +94,16 @@ The system will detect:
 
 ### Backend
 Navigate to the backend/ directory and run:
+
 ./mvnw spring-boot:run
+
 Server runs at http://localhost:8080
 
 ### Frontend
 Navigate to the frontend/ directory and run:
+
 npm install && npm run dev
+
 App runs at http://localhost:5173
 
 ### Database
