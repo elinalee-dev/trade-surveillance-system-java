@@ -17,18 +17,28 @@ public class TradeSurveillanceService {
     private final AlertRepository alertRepository;
 
     private static final int QUANTITY_THRESHOLD = 1000;
+    private static final double HIGH_VALUE_TRADE_THRESHOLD = 1_000_000.00;
     private static final String SUSPICIOUS_IP_PREFIX = "10.";
 
     public void analyzeTrade(Trade trade) {
         if (trade == null) return;
 
-        if (trade.getQuantity() >= QUANTITY_THRESHOLD)
-            save(trade, "ABNORMAL_TRADE_VOLUME", "HIGH",
-                    "Trade quantity exceeded threshold: " + trade.getQuantity());
+        double tradeValue = trade.getQuantity() * trade.getPrice();
 
-        if (trade.getIpAddress() != null && trade.getIpAddress().startsWith(SUSPICIOUS_IP_PREFIX))
+        if (tradeValue >= HIGH_VALUE_TRADE_THRESHOLD) {
+            save(trade, "POTENTIAL_MARKET_MANIPULATION", "CRITICAL",
+                    "Trade value $" + tradeValue + " met or exceeded critical threshold of $" + HIGH_VALUE_TRADE_THRESHOLD);
+        }
+
+        if (trade.getQuantity() >= QUANTITY_THRESHOLD) {
+            save(trade, "ABNORMAL_TRADE_VOLUME", "HIGH",
+                    "Submitted quantity " + trade.getQuantity() + " met or exceeded threshold of " + QUANTITY_THRESHOLD);
+        }
+
+        if (trade.getIpAddress() != null && trade.getIpAddress().startsWith(SUSPICIOUS_IP_PREFIX)) {
             save(trade, "SUSPICIOUS_IP", "MEDIUM",
                     "Suspicious IP detected: " + trade.getIpAddress());
+        }
     }
 
     private void save(Trade trade, String type, String severity, String message) {
@@ -39,6 +49,7 @@ public class TradeSurveillanceService {
                 .message(message)
                 .createdAt(LocalDateTime.now())
                 .build());
+
         log.warn("Alert [{}]: {}", type, message);
     }
 }
