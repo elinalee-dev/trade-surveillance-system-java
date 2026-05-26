@@ -87,10 +87,10 @@ The system will detect:
 ## Environment Setup Summary
 
 ### Requirements
-Java 17
-Maven
-Node.js (v18 or later)
-PostgreSQL
+- Java 17
+- Maven
+- Node.js (v18 or later)
+- PostgreSQL
 
 ### Backend
 Navigate to the backend/ directory and run:
