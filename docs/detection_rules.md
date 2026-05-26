@@ -2,7 +2,7 @@
 
 ## Abnormal Trade Volume Detection
 
-Flags trades with unusually large trade quantities.
+Flags trades with trade quantities greater than or equal to 1000.
 
 ### Condition
 
