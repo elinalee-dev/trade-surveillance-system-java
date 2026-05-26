@@ -1,5 +1,29 @@
 # Detection Rules
 
+### Severity Levels
+
+- CRITICAL: Potential market manipulation or extremely high-risk trading behavior
+- HIGH: Abnormal trade volume where quantity is greater than or equal to 1000
+- MEDIUM: Suspicious internal IP address activity
+
+## Potential Market Manipulation Detection
+
+Flags extremely large or high-value trades that may indicate suspicious market behavior.
+
+### Condition
+
+- trade quantity is significantly above the 1000-unit threshold
+- trade value is unusually high
+- suspicious repeated activity from the same account
+
+### Severity
+
+- CRITICAL
+
+### Example
+
+A trade with an unusually large quantity or high total value may generate a CRITICAL severity alert.
+
 ## Abnormal Trade Volume Detection
 
 Flags trades with trade quantities greater than or equal to 1000.
