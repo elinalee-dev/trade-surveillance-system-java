@@ -84,24 +84,24 @@ The system will detect:
 - API documentation (separate document)
 - Final report
 
-### Environment Setup Summary
+## Environment Setup Summary
 
-## Requirements
+### Requirements
 Java 17
 Maven
 Node.js (v18 or later)
 PostgreSQL
 
-## Backend
+### Backend
 Navigate to the backend/ directory and run:
 ./mvnw spring-boot:run
 Server runs at http://localhost:8080
 
-## Frontend
+### Frontend
 Navigate to the frontend/ directory and run:
 npm install && npm run dev
 App runs at http://localhost:5173
 
-## Database
+### Database
 Create a PostgreSQL database named tradesurveillance and update src/main/resources/application.properties with your credentials.
 
