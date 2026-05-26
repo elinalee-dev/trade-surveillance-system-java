@@ -30,7 +30,7 @@ public class TradeSurveillanceService {
                     "Extremely large high-value trade detected");
         }
 
-        if (trade.getQuantity() >= QUANTITY_THRESHOLD) {
+        if (trade.getQuantity() > QUANTITY_THRESHOLD) {
             save(trade, "ABNORMAL_TRADE_VOLUME", "HIGH",
                     "Trade quantity exceeded threshold: " + trade.getQuantity());
         }
