@@ -22,7 +22,7 @@ public class TradeSurveillanceService {
     public void analyzeTrade(Trade trade) {
         if (trade == null) return;
 
-        if (trade.getQuantity() > QUANTITY_THRESHOLD)
+        if (trade.getQuantity() >= QUANTITY_THRESHOLD)
             save(trade, "ABNORMAL_TRADE_VOLUME", "HIGH",
                     "Trade quantity exceeded threshold: " + trade.getQuantity());
 
