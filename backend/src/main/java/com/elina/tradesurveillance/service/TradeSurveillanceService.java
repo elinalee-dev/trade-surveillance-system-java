@@ -27,21 +27,24 @@ public class TradeSurveillanceService {
 
         if (tradeValue >= HIGH_VALUE_TRADE_THRESHOLD) {
             save(trade, "POTENTIAL_MARKET_MANIPULATION", "CRITICAL",
-                    "Trade value $" + tradeValue + " met or exceeded critical threshold of $" + HIGH_VALUE_TRADE_THRESHOLD);
+                    "Extremely large high-value trade detected");
         }
 
         if (trade.getQuantity() >= QUANTITY_THRESHOLD) {
             save(trade, "ABNORMAL_TRADE_VOLUME", "HIGH",
-                    "Submitted quantity " + trade.getQuantity() + " met or exceeded threshold of " + QUANTITY_THRESHOLD);
+                    "Trade quantity exceeded threshold: " + trade.getQuantity());
         }
 
-        if (trade.getIpAddress() != null && trade.getIpAddress().startsWith(SUSPICIOUS_IP_PREFIX)) {
+        if (trade.getIpAddress() != null &&
+                trade.getIpAddress().startsWith(SUSPICIOUS_IP_PREFIX)) {
+
             save(trade, "SUSPICIOUS_IP", "MEDIUM",
-                    "Suspicious IP detected: " + trade.getIpAddress());
+                    "Suspicious internal IP detected: " + trade.getIpAddress());
         }
     }
 
     private void save(Trade trade, String type, String severity, String message) {
+
         alertRepository.save(Alert.builder()
                 .accountId(trade.getAccountId())
                 .alertType(type)
