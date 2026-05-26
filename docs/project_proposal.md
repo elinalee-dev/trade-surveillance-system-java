@@ -49,7 +49,7 @@ This project combines concepts from software engineering, cybersecurity, financi
 
 The system will detect:
 
-1. Abnormal Trade Volume — trade quantity exceeds 1,000 units (configurable threshold)
+1. Abnormal Trade Volume — trade quantity is greater than or equal to 1,000 units
 2. Potential Market Manipulation — extremely large, high-value trade that could artificially move markets
 3. Suspicious IP Address — trade or login originates from a flagged or internal IP range
 
