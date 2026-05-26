@@ -6,6 +6,8 @@
 - HIGH: Abnormal trade volume where quantity is greater than or equal to 1000
 - MEDIUM: Suspicious internal IP address activity
 
+---
+
 ## Potential Market Manipulation Detection
 
 Flags extremely large or high-value trades that may indicate suspicious market behavior.
@@ -23,6 +25,8 @@ Flags extremely large or high-value trades that may indicate suspicious market b
 ### Example
 
 A trade with an unusually large quantity or high total value may generate a CRITICAL severity alert.
+
+---
 
 ## Abnormal Trade Volume Detection
 
