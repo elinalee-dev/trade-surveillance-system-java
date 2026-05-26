@@ -2,25 +2,43 @@
   {
     "accountId": "ACC1001",
     "symbol": "AAPL",
-    "side": "BUY",
     "quantity": 500,
-    "price": 192.45,
-    "ipAddress": "172.16.1.10"
+    "price": 180.25,
+    "ipAddress": "192.168.1.10"
+  },
+  {
+    "accountId": "ACC1002",
+    "symbol": "TSLA",
+    "quantity": 1000,
+    "price": 245.50,
+    "ipAddress": "192.168.1.20"
+  },
+  {
+    "accountId": "ACC1003",
+    "symbol": "NVDA",
+    "quantity": 1001,
+    "price": 950.75,
+    "ipAddress": "192.168.1.30"
   },
   {
     "accountId": "BOT999",
-    "symbol": "MSFT",
-    "side": "BUY",
+    "symbol": "AMD",
     "quantity": 5000,
-    "price": 401.22,
-    "ipAddress": "10.0.0.5"
+    "price": 160.40,
+    "ipAddress": "192.168.1.40"
   },
   {
-    "accountId": "TRADER77",
-    "symbol": "TSLA",
-    "side": "SELL",
-    "quantity": 2000,
-    "price": 255.80,
-    "ipAddress": "192.168.1.44"
+    "accountId": "HEDGE777",
+    "symbol": "MSFT",
+    "quantity": 700,
+    "price": 420.10,
+    "ipAddress": "10.5.5.5"
+  },
+  {
+    "accountId": "HEDGE001",
+    "symbol": "GOOG",
+    "quantity": 15000,
+    "price": 2900.00,
+    "ipAddress": "192.168.1.50"
   }
 ]
