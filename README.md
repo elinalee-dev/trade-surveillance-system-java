@@ -1,5 +1,7 @@
 # Trade Surveillance Dashboard
 
+![CI](https://github.com/elinalee-dev/trade-surveillance-system-java/actions/workflows/ci.yml/badge.svg)
+
 A full-stack financial trade monitoring platform that simulates real-time surveillance workflows used in professional trading and fintech environments. The system ingests live trade data, applies a rules-based anomaly detection engine, and surfaces alerts through an interactive analytics dashboard — mirroring the kind of tooling used by compliance and risk teams at trading firms. Built with React, Spring Boot, and PostgreSQL.
 
 ---
