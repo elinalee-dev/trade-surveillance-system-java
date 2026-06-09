@@ -38,7 +38,7 @@ The surveillance engine automatically generates alerts for the following conditi
 
 | Alert Type | Trigger |
 |---|---|
-| Abnormal Trade Volume | Trade quantity exceeds configured threshold |
+| Abnormal Trade Volume | Trade quantity is greater than or equal to 1000 |
 | Suspicious IP Address | Source IP matches flagged address list |
 | High-Value Trade | Trade value surpasses monetary limit |
 | Market Manipulation | Patterns indicative of layering or spoofing detected |

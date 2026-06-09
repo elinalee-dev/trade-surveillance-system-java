@@ -2,29 +2,27 @@
 
 ## Project Overview
 
-The goal of this project is to build a trade surveillance platform that simulates financial trading activity and detects suspicious or potentially fraudulent behavior.
-
-The system will monitor simulated trade orders, login attempts, and account activity to identify anomalies such as abnormal trade volume, suspicious IP activity, brute force login attempts, and possible account takeover behavior.
-
-This project combines concepts from software engineering, cybersecurity, financial systems, and risk monitoring.
+The Trade Surveillance System is a full-stack web application designed to simulate financial transaction monitoring and cybersecurity risk detection. The system ingests simulated trade orders, processes them through a rule-based anomaly detection engine, and surfaces alerts on a real-time monitoring dashboard.
+This project combines concepts from software engineering, cybersecurity, financial systems, and risk management, making it applicable to roles in fintech, compliance technology, and security operations.
 
 ---
 
 ## Features
 
-- Simulate trading activity and orders
-- Store transaction and login data in PostgreSQL
-- REST API endpoints for trade and alert management
-- Detect suspicious behavior using rule-based anomaly detection
-- Generate alerts based on security and risk events
-- Display alerts and monitoring statistics on a simple dashboard
+- Submit and store simulated trade orders via REST API
+- Rule-based anomaly detection engine that runs automatically on each trade
+- Generate and persist alerts categorized by type and severity (CRITICAL / HIGH / MEDIUM)
+- Filter and search alerts by account ID, severity, or alert type
+- Interactive dashboard with charts showing alert distributions and trends
+- PostgreSQL-backed persistence for trades and alerts
+
 
 ---
 
 ## Technologies and Tools
 
 ### Backend
-- Java
+- Java 17
 - Spring Boot
 - Spring Data JPA
 
@@ -37,7 +35,7 @@ This project combines concepts from software engineering, cybersecurity, financi
 ### Frontend
 - HTML
 - CSS
-- JavaScript
+- React (JavaScript)
 
 ### Tools
 - Git
@@ -51,11 +49,9 @@ This project combines concepts from software engineering, cybersecurity, financi
 
 The system will detect:
 
-1. Abnormal trade volume
-2. Excessive orders within short time periods
-3. Suspicious IP activity
-4. Login brute force attempts
-5. Potential account takeover patterns
+1. Abnormal Trade Volume — trade quantity is greater than or equal to 1,000 units
+2. Potential Market Manipulation — extremely large, high-value trade that could artificially move markets
+3. Suspicious IP Address — trade or login originates from a flagged or internal IP range
 
 ---
 
@@ -67,23 +63,49 @@ The system will detect:
 - Implement basic anomaly detection rules
 
 ### Expected Goals
-- Create a monitoring dashboard
-- Add advanced alert generation logic
-- Simulate realistic trade activity patterns
+- Add all 3 detection rules
+- Build React dashboard with filtering, pie chart, and bar chart
+- Connect frontend to live backend API.
 
 ### Future Goals
-- Real-time monitoring using WebSockets
+- Real-time alert streaming via WebSockets
+- JWT authentication and role-based access control
 - Machine learning anomaly detection
-- JWT authentication and authorization
-- Role-based access control
+- Containerization with Docker.
 
 ---
 
 ## Deliverables
 
-- Full GitHub repository
-- Backend API system
-- PostgreSQL database integration
-- Monitoring dashboard
-- Documentation and final report
-- Screenshots and architecture diagrams
+- Full GitHub repository with README and setup instructions
+- Spring Boot backend with REST API and anomaly detection engine
+- PostgreSQL schema and seed data
+- React dashboard with live alert feed, charts, and severity filters
+- API documentation (separate document)
+- Final report
+
+## Environment Setup Summary
+
+### Requirements
+- Java 17
+- Maven
+- Node.js (v18 or later)
+- PostgreSQL
+
+### Backend
+Navigate to the backend/ directory and run:
+
+./mvnw spring-boot:run
+
+Server runs at http://localhost:8080
+
+### Frontend
+Navigate to the frontend/ directory and run:
+
+npm install && npm run dev
+
+App runs at http://localhost:5173
+
+### Database
+Create a PostgreSQL database named tradesurveillance and update src/main/resources/application.properties with your credentials.
+
