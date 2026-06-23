@@ -21,9 +21,9 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build
+      - name: Build, test, and package
         working-directory: backend
-        run: mvn clean package -DskipTests -q
+        run: mvn clean verify -q
 
       - name: Build Docker image
         run: docker build -t trade-surveillance ./backend
